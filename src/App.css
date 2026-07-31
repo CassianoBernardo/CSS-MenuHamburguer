@@ -1,0 +1,62 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: blue;
+  color: white;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.menu-hamburguer {
+  display: none;
+  flex-direction: column;
+  gap: 0.25rem;
+  cursor: pointer;
+}
+
+.menu-hamburguer span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: white;
+}
+
+ul {
+  display: flex;
+  gap: 3rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-hamburguer {
+    display: flex;
+  }
+
+  ul {
+    display: none;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  nav.menu-aberto ul {
+    display: flex;
+  }
+}
+
+@media (min-width: 601px) {
+  .menu-hamburguer {
+    display: none;
+  }
+}
